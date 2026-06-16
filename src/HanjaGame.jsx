@@ -1244,7 +1244,7 @@ export default function HanjaGame() {
     setStage1Score(score);
     setScreen("reveal");
   }
-https://github.com/glo1214/ddakiji-hanja/tree/main/src
+//github.com/glo1214/ddakiji-hanja/tree/main/src
   function recordWrongTag(tag) {
     setWrongTagCounts((prev) => ({ ...prev, [tag]: (prev[tag] || 0) + 1 }));
   }
