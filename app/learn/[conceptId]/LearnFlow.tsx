@@ -377,16 +377,10 @@ function ConceptStageView({
             key: "hanja",
             eyebrow: "한자 짝맞추기",
             title: "한자 뜻을 짝지어 보자",
-            body: <HanjaMatchCard matches={hanjaMatches} combined={c.combined} wordFormation={wordFormation} />,
+            body: <HanjaMatchCard matches={hanjaMatches} combined={c.combined} definition={definition.easy || definition.dictionary} wordFormation={wordFormation} />,
           },
         ]
       : []),
-    {
-      key: "definition",
-      eyebrow: "",
-      title: "",
-      body: <DefinitionScreenCard sentence={definition.easy || definition.dictionary} />,
-    },
     ...(visualThinking
       ? [
           {
@@ -512,10 +506,12 @@ function OxCheckCard({ items }: { items: OxCheckItem[] }) {
 function HanjaMatchCard({
   matches,
   combined,
+  definition,
   wordFormation,
 }: {
   matches: HanjaMatchItem[];
   combined: string;
+  definition?: string;
   wordFormation?: WordFormation;
 }) {
   return (
@@ -580,15 +576,13 @@ function HanjaMatchCard({
           합치면 이렇게 보여 → {combined}
         </p>
       )}
+      {definition && (
+        <div style={{ marginTop: 4, padding: "12px 14px", borderRadius: 8, border: "1px solid var(--color-border-tertiary)", background: "var(--color-background-secondary)" }}>
+          <p style={{ fontSize: 12, fontWeight: 800, color: "var(--color-text-success)", marginBottom: 4 }}>이제 뜻을 열어 보면</p>
+          <p style={{ fontSize: 17, fontWeight: 800, lineHeight: 1.5, margin: 0 }}>{definition}</p>
+        </div>
+      )}
     </div>
-  );
-}
-
-function DefinitionScreenCard({ sentence }: { sentence: string }) {
-  return (
-    <p style={{ fontSize: 22, lineHeight: 1.55, fontWeight: 900, margin: 0 }}>
-      {sentence}
-    </p>
   );
 }
 
@@ -936,12 +930,7 @@ function BigPictureStageView({
   onEngage: () => void;
 }) {
   const b = content.bigPicture;
-  const setCompare = content.setCompare ?? buildSetCompare(concept);
-  const rows =
-    setCompare?.items.map((item) => ({
-      label: item.name,
-      oneLiner: item.keyPoint ?? item.role ?? item.contrast ?? "",
-    })) ?? b.compare;
+  const rows = b.compare.map((cmp) => ({ label: cmp.label, oneLiner: cmp.oneLiner }));
   const image = content.visual?.image ?? content.definitionImage?.image ?? content.screenContent?.visualThinking?.image;
   return (
     <>
@@ -954,23 +943,20 @@ function BigPictureStageView({
             style={{ width: "100%", height: 180, objectFit: "contain", borderRadius: 8, border: "1px solid var(--color-border-tertiary)", background: "#fffdf8", marginBottom: 14 }}
           />
         )}
-        <h3 style={{ margin: "0 0 8px", fontSize: 17 }}>순서</h3>
-        <div style={{ display: "grid", gap: 8, marginBottom: 16 }}>
-          {b.flow.slice(0, 2).map((f) => (
-            <p key={f.when} style={{ padding: "10px 12px", borderRadius: 8, background: "var(--color-background-secondary)", lineHeight: 1.45, margin: 0 }}>
-              <b>{f.when}</b> → {f.then}
-            </p>
-          ))}
-        </div>
-        <h3 style={{ margin: "0 0 8px", fontSize: 17 }}>닮은 말</h3>
+        <h3 style={{ margin: "0 0 8px", fontSize: 17 }}>개념어 지도</h3>
         <div style={{ display: "grid", gap: 8 }}>
-          {rows.slice(0, 3).map((r) => (
+          {rows.slice(0, 2).map((r) => (
             <p key={r.label} style={{ display: "grid", gridTemplateColumns: "82px 1fr", gap: 8, alignItems: "center", padding: "10px 12px", borderRadius: 8, border: "1px solid var(--color-border-tertiary)", margin: 0 }}>
               <b>{r.label}</b>
               <span style={{ color: "var(--color-text-secondary)", lineHeight: 1.4 }}>{r.oneLiner}</span>
             </p>
           ))}
         </div>
+        {b.why && (
+          <p style={{ marginTop: 12, padding: "10px 12px", borderRadius: 8, background: "var(--color-background-info)", color: "var(--color-text-info)", fontSize: 14, lineHeight: 1.5 }}>
+            {b.why}
+          </p>
+        )}
       </div>
       <SkipNext onSkip={onSkip} onEngage={onEngage} nextLabel="설명하기로" />
     </>
@@ -1194,15 +1180,10 @@ function ExplainStageView({
 }
 
 // ── 자기평가 (메타인지 + 정서) : 감정 날씨 · 설명 신호등 · 막힌 지점 ──
-const WEATHER = [
-  { icon: "☁️", label: "안개" },
-  { icon: "🌤️", label: "조금 보임" },
-  { icon: "☀️", label: "맑음" },
-];
 const LIGHTS = [
-  { icon: "🔴", label: "아직" },
-  { icon: "🟡", label: "대충" },
-  { icon: "🟢", label: "설명 가능" },
+  { icon: "🌑", label: "아직 깜깜" },
+  { icon: "🔅", label: "희미하게" },
+  { icon: "💡", label: "환하게 설명!" },
 ];
 const STUCK = ["없었어", "한자", "그림", "문제", "설명"];
 
@@ -1251,14 +1232,13 @@ function PreflightScreen({
   onStart: (p: { weather: number; light: number }) => void;
   onSkipKnown: () => void;
 }) {
-  const [weather, setWeather] = useState<number | null>(null);
   const [light, setLight] = useState<number | null>(null);
   const [chosen, setChosen] = useState<number | null>(null);
 
   const check = content.quiz.find((q) => q.type === "정의형") ?? content.quiz[0];
   const answered = chosen !== null;
   const correct = answered && !!check.options[chosen!]?.is_correct;
-  const ready = weather !== null && light !== null && answered;
+  const ready = light !== null && answered;
   const canSkip = correct && light === 2; // 재인 정답 + "설명 가능" 예측 → 이미 앎
 
   return (
@@ -1269,10 +1249,8 @@ function PreflightScreen({
       </p>
 
       <div style={card}>
-        <p style={{ fontSize: 14, marginBottom: 6 }}>지금 이 단어, 느낌이 어때?</p>
-        <Pick options={WEATHER} value={weather} onPick={setWeather} />
-
-        <p style={{ fontSize: 14, margin: "14px 0 6px" }}>배우기 전 예상 — 이거 남한테 설명할 수 있을 것 같아?</p>
+        <p style={{ fontSize: 14, marginBottom: 6 }}>배우기 전 예상 — 이 개념어, 지금 남한테 설명할 수 있을 것 같아?</p>
+        <p style={{ fontSize: 12, color: "var(--color-text-tertiary)", marginBottom: 8 }}>머릿속에 불이 얼마나 켜졌어?</p>
         <Pick options={LIGHTS} value={light} onPick={setLight} />
       </div>
 
@@ -1307,13 +1285,13 @@ function PreflightScreen({
             <button onClick={onSkipKnown} style={{ background: "var(--color-accent-strong)", color: "#fff", borderColor: "transparent" }}>
               복습만 · 넘기기
             </button>
-            <button onClick={() => onStart({ weather: weather!, light: light! })}>그래도 다 볼래</button>
+            <button onClick={() => onStart({ weather: 0, light: light! })}>그래도 다 볼래</button>
           </div>
         </div>
       ) : (
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <button
-            onClick={() => ready && onStart({ weather: weather!, light: light! })}
+            onClick={() => ready && onStart({ weather: 0, light: light! })}
             disabled={!ready}
             style={{ background: "var(--color-accent-strong)", color: "#fff", borderColor: "transparent", opacity: ready ? 1 : 0.5 }}
           >
@@ -1327,7 +1305,6 @@ function PreflightScreen({
 
 // 학습 후: 끝 날씨 + '예측 vs 실제' 비교(메타인지 보정) + 막힌 지점
 function PostCheck({ predict, actualLight }: { predict: { weather: number; light: number }; actualLight: number }) {
-  const [after, setAfter] = useState<number | null>(null);
   const [stuck, setStuck] = useState<number | null>(null);
 
   const gap = predict.light - actualLight; // +면 과신, -면 과소평가, 0이면 정확
@@ -1351,15 +1328,6 @@ function PostCheck({ predict, actualLight }: { predict: { weather: number; light
       <p style={{ fontSize: 12, color: "var(--color-text-tertiary)" }}>
         (예측과 실제가 가까워질수록 메타인지가 자라.)
       </p>
-
-      <p style={{ fontSize: 14, margin: "14px 0 6px" }}>시작할 땐 {WEATHER[predict.weather].icon}, 다 한 지금은?</p>
-      <Pick options={WEATHER} value={after} onPick={setAfter} />
-      {after !== null && (
-        <p style={{ fontSize: 14, marginTop: 8, color: after > predict.weather ? "var(--color-text-success)" : "var(--color-text-secondary)" }}>
-          {WEATHER[predict.weather].icon} → {WEATHER[after].icon}{" "}
-          {after > predict.weather ? "머릿속이 개었어!" : after === predict.weather ? "아직 이 자리야. 한 번 더 보자." : ""}
-        </p>
-      )}
 
       <p style={{ fontSize: 14, margin: "14px 0 6px" }}>어느 부분이 제일 어려웠어?</p>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
