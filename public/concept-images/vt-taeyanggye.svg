@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-labelledby="title desc">
+  <title id="title">태양계 단순 도식</title>
+  <desc id="desc">왼쪽의 태양을 중심으로 여러 행성이 궤도를 따라 도는 단순 선 그림</desc>
+  <rect width="640" height="280" fill="#fbfaf6"/>
+  <circle cx="92" cy="140" r="34" fill="none" stroke="#1e1c18" stroke-width="5"/>
+  <g stroke="#1e1c18" stroke-width="3" fill="none">
+    <ellipse cx="318" cy="140" rx="170" ry="44"/>
+    <ellipse cx="334" cy="140" rx="230" ry="72"/>
+    <ellipse cx="348" cy="140" rx="282" ry="100"/>
+  </g>
+  <g fill="#fbfaf6" stroke="#1e1c18" stroke-width="4">
+    <circle cx="214" cy="132" r="10"/>
+    <circle cx="292" cy="184" r="14"/>
+    <circle cx="380" cy="108" r="18"/>
+    <circle cx="480" cy="192" r="22"/>
+    <circle cx="560" cy="106" r="12"/>
+    <circle cx="514" cy="174" r="7"/>
+  </g>
+  <g stroke="#1e1c18" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <path d="M501 183c6 0 12-3 16-8"/>
+    <path d="M268 230c42 16 110 17 165 2"/>
+  </g>
+  <g stroke="#1e1c18" stroke-width="4" stroke-linecap="round">
+    <path d="M91 83v-22"/>
+    <path d="M91 219v-22"/>
+    <path d="M35 140H13"/>
+    <path d="M171 140h-22"/>
+    <path d="M50 99 34 83"/>
+    <path d="M133 99 149 83"/>
+    <path d="M50 181 34 197"/>
+    <path d="M133 181 149 197"/>
+  </g>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="700" fill="#1e1c18">
+    <text x="46" y="219">별(태양)</text>
+    <text x="370" y="78">행성</text>
+    <text x="520" y="166">위성</text>
+    <text x="304" y="258">궤도</text>
+  </g>
+</svg>

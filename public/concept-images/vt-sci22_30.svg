@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">비열 비주얼 싱킹</title>
+  <desc id="desc">같은 열을 받아도 비열이 큰 물질은 온도가 적게 오르고, 비열이 작은 물질은 온도가 많이 오르는 비교 도식</desc>
+  <rect width="640" height="360" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6" fill="none" stroke="#1e1c18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#1e1c18" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M320 34v48"/>
+    <path d="M278 78h84"/>
+    <path d="M294 102C248 130 216 158 184 192" marker-end="url(#arrow)"/>
+    <path d="M346 102C392 130 424 158 456 192" marker-end="url(#arrow)"/>
+    <path d="M120 214h170v54H120z"/>
+    <path d="M142 240c17-12 31-12 48 0s31 12 48 0 31-12 48 0"/>
+    <rect x="300" y="180" width="18" height="92" rx="9"/>
+    <circle cx="309" cy="288" r="17"/>
+    <path d="M309 250v22"/>
+    <path d="M402 214h170v54H402z"/>
+    <path d="M426 234h122M436 248h102M448 262h78"/>
+    <rect x="582" y="180" width="18" height="92" rx="9"/>
+    <circle cx="591" cy="288" r="17"/>
+    <path d="M591 204v68"/>
+    <path d="M90 312h500"/>
+  </g>
+  <g font-family="Pretendard, SUIT, Malgun Gothic, Apple SD Gothic Neo, sans-serif" font-weight="900" fill="#1e1c18">
+    <text x="280" y="28" font-size="25">같은 열</text>
+    <text x="150" y="334" font-size="23">물: 조금 오름</text>
+    <text x="420" y="334" font-size="23">모래: 많이 오름</text>
+  </g>
+</svg>

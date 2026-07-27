@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">세계화 비주얼 싱킹</title>
+  <desc id="desc">지구본 위의 여러 지역이 서로 연결되는 모습</desc>
+  <rect width="640" height="360" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M1 1 L8 4 L1 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="320" cy="158" r="112"/>
+    <path d="M320 46v224M208 158h224"/>
+    <circle cx="248" cy="118" r="11"/>
+    <circle cx="392" cy="116" r="11"/>
+    <circle cx="320" cy="220" r="11"/>
+    <path d="M262 118h108" marker-end="url(#arrow)"/>
+    <path d="M386 132l-54 72" marker-end="url(#arrow)"/>
+    <path d="M308 204l-52-70" marker-end="url(#arrow)"/>
+  </g>
+  <text x="320" y="316" font-family="Malgun Gothic, Pretendard, SUIT, sans-serif" font-size="26" font-weight="700" fill="#111" text-anchor="middle">세계가 서로 연결됨</text>
+</svg>

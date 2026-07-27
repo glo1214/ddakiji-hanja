@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-labelledby="title desc">
+  <title id="title">태양계 비주얼 싱킹</title>
+  <desc id="desc">가운데 태양을 두고 행성과 위성이 도는 구조를 보여 주는 단순 선 그림</desc>
+  <rect width="720" height="380" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6" fill="none" stroke="#1e1c18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#1e1c18" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="150" cy="174" r="38"/>
+    <path d="M150 104v24M150 220v24M80 174h24M196 174h24M102 126l18 18M198 126l-18 18M102 222l18-18M198 222l-18-18"/>
+    <ellipse cx="396" cy="174" rx="188" ry="64"/>
+    <ellipse cx="410" cy="174" rx="258" ry="104"/>
+    <path d="M570 112c18 4 32 10 46 20" marker-end="url(#arrow)"/>
+    <circle cx="330" cy="122" r="16"/>
+    <circle cx="438" cy="236" r="22"/>
+    <circle cx="548" cy="142" r="18"/>
+    <ellipse cx="590" cy="142" rx="34" ry="18"/>
+    <circle cx="602" cy="118" r="8"/>
+    <ellipse cx="602" cy="118" rx="24" ry="14"/>
+    <path d="M268 292c72 28 180 30 262 0" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif" fill="#1e1c18">
+    <text x="91" y="286" font-size="24" font-weight="800">가운데 = 태양</text>
+    <text x="352" y="86" font-size="24" font-weight="800">태양을 도는 것 = 행성</text>
+    <text x="508" y="198" font-size="24" font-weight="800">행성을 도는 것 = 위성</text>
+  </g>
+</svg>

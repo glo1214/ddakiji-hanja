@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-labelledby="title desc">
+  <title id="title">열의 이동 비주얼 싱킹</title>
+  <desc id="desc">전도 대류 복사를 세 칸으로 비교하는 단순 선 그림</desc>
+  <rect width="720" height="380" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6" fill="none" stroke="#1e1c18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#1e1c18" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M240 42v296M480 42v296"/>
+    <path d="M48 306h624"/>
+    <path d="M64 176h142"/>
+    <circle cx="88" cy="176" r="13"/>
+    <circle cx="128" cy="176" r="13"/>
+    <circle cx="168" cy="176" r="13"/>
+    <path d="M100 156c16-16 34-16 50 0M140 156c16-16 34-16 50 0"/>
+    <path d="M76 226c10-18 4-34-8-48M82 226c10-18 4-34-8-48"/>
+    <path d="M306 248h108"/>
+    <path d="M320 248v-88h80v88"/>
+    <path d="M338 196c34-42 74-6 40 32"/>
+    <path d="M378 228c-34 42-74 6-40-32"/>
+    <path d="M378 228l24-2M338 196l-24 2"/>
+    <circle cx="580" cy="168" r="26"/>
+    <path d="M580 120v22M580 194v22M532 168h22M606 168h22M546 134l16 16M614 134l-16 16M546 202l16-16M614 202l-16-16"/>
+    <path d="M580 168 520 244" marker-end="url(#arrow)"/>
+    <path d="M580 168 580 258" marker-end="url(#arrow)"/>
+    <path d="M580 168 640 244" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="800" fill="#1e1c18">
+    <text x="78" y="340">전도 = 옆으로</text>
+    <text x="312" y="340">대류 = 돌면서</text>
+    <text x="532" y="340">복사 = 곧장</text>
+  </g>
+</svg>

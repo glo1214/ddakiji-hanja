@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">응고 비주얼 싱킹</title>
+  <desc id="desc">흐트러진 액체 입자가 열을 내보내고 규칙적인 고체 입자 배열이 되는 모습</desc>
+  <rect width="640" height="360" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M1 1 L8 4 L1 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="86" y="158" width="132" height="92" rx="8"/>
+    <path d="M104 188c28-20 56 18 94 0"/>
+    <circle cx="124" cy="222" r="9"/><circle cx="160" cy="204" r="9"/><circle cx="190" cy="226" r="9"/>
+    <path d="M250 206h104" marker-end="url(#arrow)"/>
+    <path d="M304 176V96" marker-end="url(#arrow)"/>
+    <rect x="414" y="158" width="132" height="92" rx="8"/>
+    <circle cx="450" cy="187" r="9"/><circle cx="486" cy="187" r="9"/><circle cx="522" cy="187" r="9"/>
+    <circle cx="450" cy="222" r="9"/><circle cx="486" cy="222" r="9"/><circle cx="522" cy="222" r="9"/>
+  </g>
+  <g font-family="Malgun Gothic, Pretendard, SUIT, sans-serif" font-size="24" font-weight="700" fill="#111" text-anchor="middle">
+    <text x="152" y="296">액체</text>
+    <text x="304" y="80">열 나감</text>
+    <text x="480" y="296">고체</text>
+  </g>
+</svg>

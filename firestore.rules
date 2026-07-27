@@ -1,0 +1,39 @@
+rules_version = '2';
+
+// ⚠️ 보안 메모
+// 이 앱은 전화번호만으로 로그인하는 단순 구조라 진짜 인증(Firebase Auth)이 없다.
+// 따라서 아래 규칙은 "전화번호를 아는 사람"이 해당 학생 데이터를 읽고 쓰는 것을
+// 막지 못한다. 비민감 학습 데이터 + 교실용이라는 전제에서 운영용 초안이며,
+// 추후 Firebase Anonymous Auth + 커스텀 클레임으로 강화하는 것을 권장한다.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 개념 메타·문항: 콘텐츠팀이 작성하는 읽기 전용 데이터.
+    // 쓰기는 시드 스크립트(Admin SDK, 규칙 우회)만 하므로 클라이언트 쓰기는 막는다.
+    match /concepts/{id} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /quiz_items/{id} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /admins/{phone} {
+      // 관리자 계정: 최초 생성, 존재 여부 확인, 전화번호+비밀번호 검증에 사용.
+      // 현재 앱은 Firebase Auth 없이 클라이언트에서 직접 읽고 쓰므로 운영 전 보안 강화가 필요하다.
+      allow read: if true;
+      allow create: if request.resource.data.phone == phone;
+      allow update, delete: if false;
+    }
+
+    match /students/{phone} {
+      // 학생 계정 문서: 로그인 조회/선생님 생성 위해 읽기·쓰기 허용
+      allow read, write: if true;
+
+      // 진행상황·오답태그 + 학습 흐름(attempts·word_progress·diagnostics) 하위 컬렉션
+      match /{sub}/{docId} {
+        allow read, write: if true;
+      }
+    }
+  }
+}

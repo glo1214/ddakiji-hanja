@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+  <title id="title">승화 1단계 그림</title>
+  <desc id="desc">드라이아이스 입자가 액체를 거치지 않고 기체처럼 흩어지는 단순 그림</desc>
+  <rect width="640" height="320" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M1 1 L8 4 L1 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="74" y="128" width="130" height="92" rx="8"/>
+    <circle cx="108" cy="156" r="9"/><circle cx="139" cy="156" r="9"/><circle cx="170" cy="156" r="9"/>
+    <circle cx="108" cy="192" r="9"/><circle cx="139" cy="192" r="9"/><circle cx="170" cy="192" r="9"/>
+    <path d="M232 156C304 88 392 88 464 156" marker-end="url(#arrow)"/>
+    <rect x="275" y="150" width="88" height="60" rx="7"/>
+    <circle cx="304" cy="174" r="8"/><circle cx="334" cy="184" r="8"/>
+    <path d="M278 150l82 60M360 150l-82 60"/>
+    <circle cx="486" cy="120" r="8"/><circle cx="530" cy="100" r="8"/><circle cx="542" cy="160" r="8"/><circle cx="496" cy="190" r="8"/>
+  </g>
+  <g font-family="Malgun Gothic, Pretendard, SUIT, sans-serif" font-size="22" font-weight="700" fill="#111" text-anchor="middle">
+    <text x="139" y="256">드라이아이스</text>
+    <text x="319" y="256">물 X</text>
+    <text x="514" y="256">기체</text>
+  </g>
+</svg>

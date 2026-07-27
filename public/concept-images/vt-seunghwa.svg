@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">승화 비주얼 싱킹</title>
+  <desc id="desc">고체의 촘촘한 입자 배열이 액체를 거치지 않고 기체의 흩어진 입자로 바뀌는 모습</desc>
+  <rect width="640" height="360" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M1 1 L8 4 L1 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="88" y="158" width="122" height="90" rx="8"/>
+    <circle cx="124" cy="187" r="9"/><circle cx="160" cy="187" r="9"/><circle cx="196" cy="187" r="9"/>
+    <circle cx="124" cy="222" r="9"/><circle cx="160" cy="222" r="9"/><circle cx="196" cy="222" r="9"/>
+    <path d="M240 174C318 98 414 98 492 174" marker-end="url(#arrow)"/>
+    <circle cx="500" cy="146" r="8"/><circle cx="536" cy="118" r="8"/><circle cx="548" cy="176" r="8"/><circle cx="512" cy="206" r="8"/>
+    <path d="M306 202c11 16 22 30 22 45a23 23 0 0 1-46 0c0-15 11-29 24-45z"/>
+    <path d="M276 206l58 58M334 206l-58 58"/>
+  </g>
+  <g font-family="Malgun Gothic, Pretendard, SUIT, sans-serif" font-size="24" font-weight="700" fill="#111" text-anchor="middle">
+    <text x="149" y="294">고체</text>
+    <text x="305" y="294">액체 X</text>
+    <text x="524" y="294">기체</text>
+  </g>
+</svg>

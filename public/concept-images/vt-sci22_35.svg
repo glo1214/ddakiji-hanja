@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">융해 비주얼 싱킹</title>
+  <desc id="desc">규칙적인 고체 입자가 열을 받아 불규칙한 액체 입자로 바뀌는 모습</desc>
+  <rect width="640" height="360" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M1 1 L8 4 L1 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="94" y="150" width="138" height="96" rx="8"/>
+    <circle cx="130" cy="179" r="9"/><circle cx="163" cy="179" r="9"/><circle cx="196" cy="179" r="9"/>
+    <circle cx="130" cy="216" r="9"/><circle cx="163" cy="216" r="9"/><circle cx="196" cy="216" r="9"/>
+    <path d="M268 198h104" marker-end="url(#arrow)"/>
+    <path d="M320 94v70" marker-end="url(#arrow)"/>
+    <rect x="408" y="150" width="138" height="96" rx="8"/>
+    <circle cx="444" cy="215" r="9"/><circle cx="475" cy="181" r="9"/><circle cx="512" cy="212" r="9"/>
+    <circle cx="446" cy="176" r="9"/><circle cx="483" cy="225" r="9"/><circle cx="518" cy="180" r="9"/>
+  </g>
+  <g font-family="Malgun Gothic, Pretendard, SUIT, sans-serif" font-size="24" font-weight="700" fill="#111" text-anchor="middle">
+    <text x="163" y="296">고체</text>
+    <text x="320" y="80">열 받음</text>
+    <text x="477" y="296">액체</text>
+  </g>
+</svg>

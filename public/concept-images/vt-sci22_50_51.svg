@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-labelledby="title desc">
+  <title id="title">질량과 무게 비주얼 싱킹</title>
+  <desc id="desc">지구와 달에서 질량은 그대로이고 무게는 달라지는 비교 그림</desc>
+  <rect width="720" height="380" fill="#fffdf8"/>
+  <g fill="none" stroke="#1e1c18" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M360 42v276"/>
+    <circle cx="175" cy="124" r="44"/>
+    <path d="M132 124h86M175 80c-16 22-16 66 0 88M175 80c16 22 16 66 0 88"/>
+    <circle cx="548" cy="124" r="30"/>
+    <path d="M96 304h180M472 304h180"/>
+    <circle cx="184" cy="202" r="16"/>
+    <path d="M184 218v48M156 238h56M184 266l-26 36M184 266l26 36"/>
+    <circle cx="558" cy="202" r="16"/>
+    <path d="M558 218v48M530 238h56M558 266l-26 36M558 266l26 36"/>
+    <path d="M104 244h80l-40-42zM184 244h80l-40-42z"/>
+    <path d="M144 202v-20M224 202v-20M124 182h120"/>
+    <path d="M484 250h82l-41-34zM566 250h82l-41-34z"/>
+    <path d="M525 216v-20M607 216v-20M505 196h122"/>
+    <rect x="244" y="180" width="28" height="94" rx="14"/>
+    <path d="M258 180v44"/>
+    <rect x="630" y="180" width="28" height="94" rx="14"/>
+    <path d="M644 180v22"/>
+  </g>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif" fill="#1e1c18">
+    <text x="151" y="62" font-size="26" font-weight="800">지구</text>
+    <text x="531" y="62" font-size="26" font-weight="800">달</text>
+    <text x="88" y="344" font-size="24" font-weight="800">질량 = 안 변함</text>
+    <text x="452" y="344" font-size="24" font-weight="800">무게 = 줄어듦</text>
+  </g>
+</svg>

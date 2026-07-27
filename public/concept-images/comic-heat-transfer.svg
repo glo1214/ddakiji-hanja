@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+  <title id="title">열의 이동 1단계 만화</title>
+  <desc id="desc">숟가락, 냄비, 불에서 열이 움직이는 세 장면</desc>
+  <rect width="640" height="320" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6" fill="none" stroke="#1e1c18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#1e1c18" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M212 44v232M428 44v232"/>
+    <path d="M58 190h118"/>
+    <path d="M76 190c6-40 82-40 88 0"/>
+    <path d="M62 190c20 14 92 14 112 0"/>
+    <path d="M88 160l82-72"/>
+    <path d="M120 132l42 42" marker-end="url(#arrow)"/>
+    <path d="M270 202h100"/>
+    <path d="M286 202c10-42 74-42 84 0"/>
+    <path d="M296 170c22 16 48 16 70 0"/>
+    <path d="M300 232h72"/>
+    <path d="M314 150c-22 28-18 56 10 74" marker-end="url(#arrow)"/>
+    <path d="M360 220c24-28 20-58-8-76" marker-end="url(#arrow)"/>
+    <path d="M488 228c30-20 10-54 0-74-10 22-40 42-10 74"/>
+    <path d="M530 228c30-20 10-54 0-74-10 22-40 42-10 74"/>
+    <path d="M462 238h96"/>
+    <path d="M500 138C462 104 474 74 518 52"/>
+    <path d="M526 138C564 104 552 74 508 52"/>
+    <path d="M498 124l-34-20M530 124l34-20" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif" fill="#1e1c18" font-weight="800" font-size="22">
+    <text x="74" y="288">숟가락</text>
+    <text x="302" y="288">냄비</text>
+    <text x="502" y="288">불</text>
+  </g>
+</svg>

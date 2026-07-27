@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+  <title id="title">질량과 무게 1단계 만화</title>
+  <desc id="desc">같은 사람이 지구와 달에서 다르게 당겨지는 상황</desc>
+  <rect width="640" height="320" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6" fill="none" stroke="#1e1c18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#1e1c18" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="170" cy="238" r="58"/>
+    <path d="M118 218c28 10 72 10 104 0M138 260c20-14 42-14 64 0"/>
+    <circle cx="170" cy="106" r="21"/>
+    <path d="M170 127v54M170 146h-28M170 146h28M170 181l-24 30M170 181l24 30"/>
+    <path d="M170 142v72" marker-end="url(#arrow)"/>
+    <path d="M144 62h52v24h-52z"/>
+    <path d="M468 238" />
+    <circle cx="470" cy="246" r="42"/>
+    <path d="M446 232c16 8 34 8 50 0"/>
+    <circle cx="470" cy="106" r="21"/>
+    <path d="M470 127v54M470 146h-28M470 146h28M470 181l-24 30M470 181l24 30"/>
+    <path d="M470 150v42" marker-end="url(#arrow)"/>
+    <path d="M446 62h52v24h-52z"/>
+    <path d="M286 158h70" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif" fill="#1e1c18" font-weight="800" font-size="24">
+    <text x="148" y="304">지구</text>
+    <text x="452" y="304">달</text>
+    <text x="144" y="58">60</text>
+    <text x="450" y="58">10</text>
+    <text x="296" y="144">같은 사람</text>
+  </g>
+</svg>

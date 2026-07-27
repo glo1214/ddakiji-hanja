@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>선생님용 학습 리포트 목업 — 이서연</title>
+<style>
+  :root{
+    --bg:#faf9f5; --card:#ffffff; --surface:#f1efe8;
+    --text:#2c2c2a; --muted:#5f5e5a; --hint:#888780;
+    --line:rgba(0,0,0,.12); --info-bg:#e6f1fb; --info:#185fa5; --info-line:#85b7eb;
+    --danger:#a32d2d;
+    --c1:#d85a30; --c2:#ef9f27; --c3:#1d9e75; --c4:#7f77dd; --c5:#378add; --c6:#b4b2a9;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--text);
+    font-family:"맑은 고딕","Malgun Gothic",system-ui,-apple-system,sans-serif; line-height:1.6;}
+  .wrap{max-width:760px; margin:0 auto; padding:2rem 1.25rem;}
+  h1{font-size:20px; font-weight:500; margin:0;}
+  .sub{font-size:13px; color:var(--muted); margin:0;}
+  .row{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;}
+  .avatar{width:44px; height:44px; border-radius:50%; background:var(--info-bg); color:var(--info);
+    display:flex; align-items:center; justify-content:center; font-weight:500; font-size:14px;}
+  .badge{font-size:12px; padding:5px 12px; border-radius:8px;}
+  .badge.info{background:var(--info-bg); color:var(--info);}
+  .badge.muted{background:var(--surface); color:var(--muted);}
+  .grid4{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px;}
+  .metric{background:var(--surface); border-radius:8px; padding:1rem;}
+  .metric p.k{font-size:13px; color:var(--muted); margin:0 0 4px;}
+  .metric p.v{font-size:24px; font-weight:500; margin:0;}
+  .sec{font-size:14px; font-weight:500; margin:1.75rem 0 .7rem;}
+  .bar-row{display:flex; align-items:center; gap:10px; font-size:13px; margin-bottom:8px;}
+  .bar-row .lab{width:96px; color:var(--muted);}
+  .bar{height:16px; border-radius:4px;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .cell{background:var(--card); border:.5px solid var(--line); border-radius:12px; padding:.9rem 1rem;}
+  .cell.hi{border:2px solid var(--info-line);}
+  .cell p.t{font-size:12px; color:var(--muted); margin:0 0 4px;}
+  .cell p.n{font-size:14px; font-weight:500; margin:0 0 2px;}
+  .cell p.c{font-size:13px; color:var(--info); margin:0;}
+  .cell p.c.d{color:var(--danger);}
+  .rx{background:var(--info-bg); border-radius:12px; padding:1rem 1.25rem; margin-top:1.5rem;}
+  .rx p.h{font-size:14px; font-weight:500; margin:0 0 4px; color:var(--info);}
+  .rx p.b{font-size:13px; color:var(--info); margin:0;}
+  table{width:100%; border-collapse:collapse; font-size:13px; margin-top:.5rem;}
+  th,td{text-align:left; padding:8px 10px; border-bottom:.5px solid var(--line);}
+  th{color:var(--muted); font-weight:500;}
+  .note{font-size:12px; color:var(--hint); margin-top:1.5rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="row" style="margin-bottom:1.25rem;">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <div class="avatar">이서</div>
+      <div><h1>이서연 · 중2</h1><p class="sub">최근 2주 학습 요약</p></div>
+    </div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <span class="badge info">진입점 · 따라해보기형</span>
+      <span class="badge muted">렌즈 · 전체 인식형</span>
+    </div>
+  </div>
+
+  <div class="grid4">
+    <div class="metric"><p class="k">총 공부 시간</p><p class="v">4시간 20분</p></div>
+    <div class="metric"><p class="k">이번 주</p><p class="v">1시간 10분</p></div>
+    <div class="metric"><p class="k">학습 단어</p><p class="v">24개</p></div>
+    <div class="metric"><p class="k">설명하기 완료</p><p class="v">9 / 9</p></div>
+  </div>
+
+  <p class="sec">오류 태그 빈도</p>
+  <div class="bar-row"><span class="lab">① 범주</span><span class="bar" style="width:60%; background:var(--c1);"></span><span style="color:var(--muted);">3</span></div>
+  <div class="bar-row"><span class="lab">② 용어</span><span class="bar" style="width:40%; background:var(--c2);"></span><span style="color:var(--muted);">2</span></div>
+  <div class="bar-row"><span class="lab">③ 구조</span><span class="bar" style="width:40%; background:var(--c3);"></span><span style="color:var(--muted);">2</span></div>
+  <div class="bar-row"><span class="lab">④ 핵심</span><span class="bar" style="width:20%; background:var(--c4);"></span><span style="color:var(--muted);">1</span></div>
+  <div class="bar-row"><span class="lab">⑤ 혼동</span><span class="bar" style="width:40%; background:var(--c5);"></span><span style="color:var(--muted);">2</span></div>
+  <div class="bar-row"><span class="lab">⑥ 표현</span><span class="bar" style="width:4%; background:var(--c6);"></span><span style="color:var(--muted);">0</span></div>
+
+  <p class="sec">객관식 × 주관식 (개념 배치)</p>
+  <div class="grid2">
+    <div class="cell"><p class="t">객관식 ○ · 주관식 ○</p><p class="n">A. 완전 이해</p><p class="c">민주주의</p></div>
+    <div class="cell hi"><p class="t">객관식 ○ · 주관식 ✕</p><p class="n">B. 재인 &gt; 인출</p><p class="c">비유</p></div>
+    <div class="cell"><p class="t">객관식 ✕ · 주관식 ○</p><p class="n">C. 변별 약함</p><p class="c">기후</p></div>
+    <div class="cell"><p class="t">객관식 ✕ · 주관식 ✕</p><p class="n">D. 미습득</p><p class="c d">관성</p></div>
+  </div>
+
+  <p class="sec">개념별 현황</p>
+  <table>
+    <tr><th>개념</th><th>객관식 정답률</th><th>주관식 태그</th><th>칸</th></tr>
+    <tr><td>관성</td><td>40%</td><td>① 범주, ② 용어</td><td>D</td></tr>
+    <tr><td>기후</td><td>50%</td><td>⑤ 혼동</td><td>C</td></tr>
+    <tr><td>비유</td><td>100%</td><td>② 용어</td><td>B</td></tr>
+    <tr><td>분업</td><td>67%</td><td>③ 구조</td><td>—</td></tr>
+    <tr><td>민주주의</td><td>100%</td><td>없음</td><td>A</td></tr>
+  </table>
+
+  <div class="rx">
+    <p class="h">처방 1순위 · 범주화 훈련</p>
+    <p class="b">① 범주 오류가 객관식과 주관식 양쪽에서 반복돼 약점으로 확정. 상위어↔하위어 분류 연습부터 권장.</p>
+  </div>
+
+  <p class="note">* 가상 학생 예시 데이터 (목업). 실제 값은 앱 사용 기록에서 자동 집계됨.</p>
+
+</div>
+</body>
+</html>

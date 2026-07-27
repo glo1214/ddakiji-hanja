@@ -1,0 +1,510 @@
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 18px 40px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.brandDot {
+  color: var(--color-accent);
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.iconButton {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eyebrow {
+  color: var(--color-text-info);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  max-width: 620px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+.subjectControl {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-secondary);
+}
+
+.subjectButton {
+  min-width: 52px;
+  padding: 8px 10px;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+}
+
+.subjectButtonActive {
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-secondary);
+  font-weight: 700;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(420px, 1.05fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.panel {
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 18px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.smallText {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.uploadGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.uploadSlot {
+  min-height: 138px;
+  border: 1px dashed var(--color-border-secondary);
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-secondary);
+  overflow: hidden;
+  position: relative;
+}
+
+.uploadLabel {
+  height: 100%;
+  min-height: 138px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.uploadIcon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-background-primary);
+  color: var(--color-text-info);
+}
+
+.uploadTitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.uploadHint {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.fileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.preview {
+  width: 100%;
+  height: 138px;
+  object-fit: cover;
+  display: block;
+}
+
+.clearPreview {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(251, 250, 246, 0.92);
+}
+
+.fieldStack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.textarea {
+  min-height: 84px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.shortTextarea {
+  min-height: 58px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.primaryButton {
+  background: var(--color-accent);
+  border-color: var(--color-accent-strong);
+  font-weight: 700;
+}
+
+.resultHero {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+  margin-bottom: 14px;
+}
+
+.riskBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  min-height: 112px;
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-warning);
+  color: var(--color-text-warning);
+  text-align: center;
+  padding: 12px;
+}
+
+.riskLabel {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.riskValue {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.summaryBox {
+  min-height: 112px;
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 13px 14px;
+  background: var(--color-background-secondary);
+}
+
+.summaryKicker {
+  margin: 0 0 5px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.summaryText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.section {
+  padding: 15px 0;
+  border-top: 1px solid var(--color-border-tertiary);
+}
+
+.section:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.criteriaList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.criterion {
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 11px;
+  background: var(--color-background-primary);
+}
+
+.criterionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.criterionTitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ok {
+  color: var(--color-text-success);
+}
+
+.caution {
+  color: var(--color-text-warning);
+}
+
+.missing {
+  color: var(--color-text-danger);
+}
+
+.criterionReason {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--color-background-info);
+  color: var(--color-text-info);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reasonList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reasonItem {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 8px;
+  color: var(--color-text-primary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.reasonIcon {
+  color: var(--color-text-danger);
+  margin-top: 2px;
+}
+
+.thinkingBox {
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-background-success);
+  border-radius: var(--border-radius-md);
+  padding: 12px 13px;
+}
+
+.rewriteBox {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 13px 14px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checkItem {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 8px;
+  color: var(--color-text-primary);
+  font-size: 14px;
+}
+
+.emptyResult {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .subjectControl {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .page {
+    padding: 14px 12px 32px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+  }
+
+  .topActions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .uploadGrid,
+  .criteriaList,
+  .resultHero,
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .riskBox {
+    min-height: 84px;
+  }
+}

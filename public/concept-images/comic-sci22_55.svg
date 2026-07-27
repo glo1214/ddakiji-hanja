@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+  <title id="title">태양계 1단계 만화</title>
+  <desc id="desc">태양을 중심으로 행성이 돌고 행성 주위를 위성이 도는 상황</desc>
+  <rect width="640" height="320" fill="#fffdf8"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6" fill="none" stroke="#1e1c18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#1e1c18" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="220" cy="160" r="36"/>
+    <path d="M220 96v20M220 204v20M156 160h20M264 160h20M176 116l14 14M264 116l-14 14M176 204l14-14M264 204l-14-14"/>
+    <ellipse cx="320" cy="160" rx="190" ry="84"/>
+    <path d="M506 154l18 6-18 6"/>
+    <circle cx="438" cy="116" r="24"/>
+    <ellipse cx="438" cy="116" rx="54" ry="30"/>
+    <path d="M488 108l15 8-15 8"/>
+    <circle cx="494" cy="96" r="10"/>
+    <circle cx="346" cy="224" r="16"/>
+    <path d="M96 60h448M96 260h448"/>
+  </g>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif" fill="#1e1c18" font-weight="800" font-size="24">
+    <text x="196" y="286">태양</text>
+    <text x="414" y="86">행성</text>
+    <text x="506" y="90">위성</text>
+  </g>
+</svg>

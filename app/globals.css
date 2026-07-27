@@ -1,0 +1,158 @@
+/*
+ * 디자인 토큰 + 기본 요소 스타일 — 크림 종이 + 검정 손그림 + 초록 포인트 테마.
+ * 게임 전체가 var(--color-*) 토큰을 쓰므로, 토큰 값만 바꾸면 화면이 한 번에 리스킨된다.
+ */
+:root {
+  /* 배경 (크림 계열) */
+  --color-background-primary: #fffdf8; /* 카드 (살짝 흰끼) */
+  --color-background-secondary: #f4f1e8; /* 안쪽 면 / 패널 */
+  --color-background-success: #e7f0d8;
+  --color-background-info: #e6ebee;
+  --color-background-danger: #f4e4de;
+  --color-background-warning: #f6ead2;
+
+  /* 글자 (잉크 + 차분한 톤) */
+  --color-text-primary: #1e1c18;
+  --color-text-secondary: #6e685b;
+  --color-text-tertiary: #a8a295;
+  --color-text-success: #5c9e2c;
+  --color-text-info: #4c6475;
+  --color-text-danger: #b0472c;
+  --color-text-warning: #8a5a1e;
+
+  /* 테두리 */
+  --color-border-secondary: #cfcbbe;
+  --color-border-tertiary: #dedbcf;
+
+  /* 모서리 반경 */
+  --border-radius-md: 8px;
+  --border-radius-lg: 8px;
+
+  /* 브랜드 포인트 */
+  --color-paper: #f2f0e8; /* 페이지 배경 */
+  --color-accent: #b9ef4d; /* ON 포인트 */
+  --color-accent-strong: #4f9f2e;
+  --color-brand-ink: #11100e;
+  --shadow-soft: 0 10px 24px rgba(31, 32, 20, 0.08);
+
+  --font-sans: "Pretendard", "SUIT", -apple-system, BlinkMacSystemFont,
+    system-ui, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+h3 {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  padding: 12px 16px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border-secondary);
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+}
+
+button:hover:not(:disabled) {
+  background: var(--color-background-secondary);
+}
+
+button:disabled {
+  cursor: default;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 11px 12px;
+  border: 1px solid var(--color-border-secondary);
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-accent-strong);
+  outline-offset: 1px;
+}
+
+:root {
+  color-scheme: light;
+}
+
+@keyframes glo-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.pop-card {
+  animation: glo-pop 0.22s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pop-card {
+    animation: none;
+  }
+}
+
+/* 인쇄(학습 보고서 PDF 저장) — 도구 버튼은 빼고 보고서만 깔끔하게 */
+@media print {
+  body {
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .report-root {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  /* 코멘트 입력칸은 인쇄 시 일반 글처럼 보이게 */
+  .report-comment {
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    resize: none !important;
+  }
+}
