@@ -7,11 +7,11 @@ import { useAuth } from "./providers";
 import HanjaGame from "./HanjaGame";
 
 const DEMO_CONCEPTS = [
-  { id: "sci22_30", name: "비열", note: "물은 왜 천천히 데워질까?" },
-  { id: "sci22_36", name: "응고", note: "액체가 굳어지는 변화" },
-  { id: "sci22_27", name: "열의 이동", note: "전도·대류·복사 비교" },
-  { id: "sci22_50", name: "질량↔무게", note: "달에 가면 무엇이 바뀔까?" },
-  { id: "sci22_55", name: "태양계", note: "태양 중심의 천체 묶음" },
+  { id: "sci22_35", name: "융해", note: "고체가 녹아 액체로" },
+  { id: "sci22_36", name: "응고", note: "액체가 굳어 고체로" },
+  { id: "sci22_39", name: "승화", note: "고체가 바로 기체로 (액체 건너뜀)" },
+  { id: "soc1_01", name: "세계화", note: "세계가 하나로 이어짐" },
+  { id: "soc1_02", name: "지역화", note: "지역 특색이 세계로" },
 ];
 
 function GloOnLogo({ compact = false }: { compact?: boolean }) {

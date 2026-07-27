@@ -10,7 +10,7 @@ export default function DemoEntryPage() {
 
   useEffect(() => {
     demoLogin();
-    router.replace("/learn/sci22_30");
+    router.replace("/learn/sci22_35");
   }, [demoLogin, router]);
 
   return (
