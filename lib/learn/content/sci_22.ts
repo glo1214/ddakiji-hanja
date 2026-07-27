@@ -19,7 +19,7 @@ const eunggo: ConceptContent = {
 
   concept: {
     hanja: [
-      { char: "凝", mean: "엉길 응", note: "흩어져 있던 것이 한데 엉겨 붙음" },
+      { char: "凝", mean: "엉길 응", note: "엉기다: 흩어져 움직이던 것이 서로 달라붙어 한 덩어리로 뭉침" },
       { char: "固", mean: "굳을 고", note: "굳음 (고체·고집·고정에도 든 그 '고')" },
     ],
     combined: "엉겨서 굳음 → 액체가 굳어 고체가 되는 것",

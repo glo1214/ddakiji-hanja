@@ -95,7 +95,7 @@ const eunggoScreenContent: ConceptContent["screenContent"] = {
   feel: {
     comicSituation: "냉동실에 넣어 둔 물이 다음 날 딱딱한 얼음이 되어 있어. 흐르던 촛농도 식으면 굳어.",
     question: "흐르던 액체가 왜 딱딱하게 굳을까?",
-    image: "/concept-images/comic-sci22_36.svg",
+    image: "/concept-images/comic-eunggo.png",
   },
   ox: [
     {
@@ -110,7 +110,7 @@ const eunggoScreenContent: ConceptContent["screenContent"] = {
     },
   ],
   hanjaMatches: [
-    { char: "凝", meaning: "엉길 응", relatedWords: ["응결"] },
+    { char: "凝", meaning: "엉길 응", relatedWords: ["응결"], note: "엉기다 = 흩어져 자유롭게 움직이던 것들이 서로 달라붙어 한 덩어리로 뭉치는 것" },
     { char: "固", meaning: "굳을 고", relatedWords: ["고체", "고집"] },
   ],
   definition: {
@@ -250,6 +250,164 @@ const solarSystemScreenContent: ConceptContent["screenContent"] = {
   ],
 };
 
+const yunghaeScreenContent: ConceptContent["screenContent"] = {
+  feel: {
+    comicSituation: "손에 쥔 아이스크림이 녹아 흐르고, 냉장고에서 꺼낸 얼음도 금세 물이 돼.",
+    question: "단단하던 고체가 왜 물처럼 흐르게 될까?",
+    image: "/concept-images/comic-yunghae.png",
+  },
+  ox: [
+    {
+      statement: "고체가 녹아 액체가 되려면 열을 얻어야 해.",
+      answer: true,
+      feedback: "맞아. 융해는 열을 흡수하는 변화야.",
+    },
+    {
+      statement: "융해할 때 입자의 개수가 늘어나.",
+      answer: false,
+      feedback: "아니야. 입자 수는 그대로고, 규칙적이던 배열이 느슨해질 뿐이야.",
+    },
+  ],
+  hanjaMatches: [
+    { char: "融", meaning: "녹을 융", relatedWords: ["융합", "용융"] },
+    { char: "解", meaning: "풀 해", relatedWords: ["해결", "해석"] },
+  ],
+  definition: {
+    dictionary: "융해는 고체가 열을 흡수하여 액체로 변하는 현상이야.",
+    easy: "융해는 고체가 열을 얻어 액체로 녹는 거야. 입자가 열을 받아 움직임이 활발해지면, 규칙적이던 배열이 느슨하게 풀려.",
+  },
+  visualThinking: {
+    image: "/concept-images/demo-yunghae.png",
+    description: "줄 맞춰 있던 고체 입자가 열을 얻어 느슨하게 흩어지며 액체가 돼.",
+    label: "고체(줄 맞춤) → 열 얻음 → 액체(느슨)",
+    avoid: "입자가 사라지거나 새로 생기는 것처럼 그리면 안 돼. 개수는 그대로야.",
+  },
+  explainHints: [
+    "무엇이? 어떤 상태의 물질이 변하기 시작해?",
+    "어떻게? 열과 입자의 배열은 어떻게 돼?",
+    "그래서? 물질은 무엇으로 변해?",
+  ],
+};
+
+const seunghwaScreenContent: ConceptContent["screenContent"] = {
+  feel: {
+    comicSituation: "냉동실 서리가 어느새 사라지고, 아이스크림 속 드라이아이스도 물기 없이 스르르 없어져.",
+    question: "물처럼 녹지도 않았는데, 고체가 어디로 사라졌을까?",
+    image: "/concept-images/comic-seunghwa.png",
+  },
+  ox: [
+    {
+      statement: "승화는 고체가 액체를 거쳐 기체가 되는 거야.",
+      answer: false,
+      feedback: "아니야. 액체 단계를 건너뛰고 고체에서 바로 기체가 돼.",
+    },
+    {
+      statement: "드라이아이스가 스르르 줄어드는 건 승화야.",
+      answer: true,
+      feedback: "맞아. 고체 이산화탄소가 액체 없이 바로 기체로 변해.",
+    },
+  ],
+  hanjaMatches: [
+    { char: "昇", meaning: "오를 승", relatedWords: ["상승", "승진"] },
+    { char: "華", meaning: "빛날 화", relatedWords: ["화려", "화사"] },
+  ],
+  definition: {
+    dictionary: "승화는 고체가 액체를 거치지 않고 바로 기체로 변하는 현상이야.",
+    easy: "승화는 고체가 액체 단계를 건너뛰고 곧바로 기체로 변하는 거야. 반대로 기체가 바로 고체가 되기도 해.",
+  },
+  visualThinking: {
+    image: "/concept-images/demo-seunghwa.png",
+    description: "줄 맞춘 고체 입자가 액체 단계를 건너뛰고, 곧바로 멀리 흩어지는 기체가 돼.",
+    label: "고체 → (액체 건너뜀) → 기체",
+    avoid: "고체→액체→기체로 순서대로 거치는 것처럼 그리면 안 돼. 액체 단계는 없어.",
+  },
+  explainHints: [
+    "무엇이? 어떤 상태의 물질이 변해?",
+    "어떻게? 어떤 단계를 건너뛰어?",
+    "그래서? 물질은 무엇으로 변해?",
+  ],
+};
+
+const segyehwaScreenContent: ConceptContent["screenContent"] = {
+  feel: {
+    comicSituation: "전 세계 사람들이 같은 햄버거를 먹고, 우리나라 BTS 음악을 함께 들어.",
+    question: "서로 멀리 떨어진 사람들이 어떻게 같은 걸 먹고 들을까?",
+    image: "/concept-images/comic-segyehwa.png",
+  },
+  ox: [
+    {
+      statement: "세계화는 나라들이 서로 더 많이 주고받으며 가까워지는 거야.",
+      answer: true,
+      feedback: "맞아. 상품·문화·정보가 국경을 넘어 오가며 상호의존이 커져.",
+    },
+    {
+      statement: "세계화는 모든 나라가 서양처럼 되는 것을 뜻해.",
+      answer: false,
+      feedback: "아니야. 서로 주고받는 교류지, 한쪽을 일방적으로 따라가는 게 아니야.",
+    },
+  ],
+  hanjaMatches: [
+    { char: "世", meaning: "세상 세", relatedWords: ["세상", "세대"] },
+    { char: "界", meaning: "경계 계", relatedWords: ["경계", "한계", "세계"] },
+    { char: "化", meaning: "될 화", relatedWords: ["변화", "도시화"] },
+  ],
+  definition: {
+    dictionary: "세계화는 나라 간 교류가 늘어 세계가 하나처럼 밀접하게 연결되는 현상이야.",
+    easy: "세계화는 상품·문화·정보가 국경을 넘어 활발히 오가면서, 나라들이 서로 기대고 영향을 주고받게 되는 거야.",
+  },
+  visualThinking: {
+    image: "/concept-images/demo-segyehwa.png",
+    description: "여러 나라 사이로 상품·문화·정보가 화살표를 타고 양쪽으로 오가.",
+    label: "국경을 넘어 서로 주고받음 (상호의존)",
+    avoid: "한 나라가 다른 나라를 일방적으로 지배하는 것처럼 그리면 안 돼. 서로 오가는 교류야.",
+  },
+  explainHints: [
+    "무엇이? 무엇이 나라 사이를 오가?",
+    "어떻게/왜? 무엇 덕분에 이렇게 연결됐어? (교통·통신 발달)",
+    "그래서? 우리 생활은 어떻게 달라졌어?",
+  ],
+};
+
+const jiyeokhwaScreenContent: ConceptContent["screenContent"] = {
+  feel: {
+    comicSituation: "어떤 지역은 특산물과 축제로 이름을 알려. '보성 녹차', '함평 나비 축제'처럼 그 지역 하면 떠오르는 게 있어.",
+    question: "세계와 연결되는 시대에, 왜 지역만의 특색이 더 중요해질까?",
+    image: "/concept-images/comic-jiyeokhwa.png",
+  },
+  ox: [
+    {
+      statement: "지역화는 지역만의 고유한 특색을 살려 경쟁력을 갖는 거야.",
+      answer: true,
+      feedback: "맞아. 그 지역다움이 곧 경쟁력이 돼.",
+    },
+    {
+      statement: "지역화는 세계화의 반대라서, 둘은 함께 일어날 수 없어.",
+      answer: false,
+      feedback: "아니야. 세계화와 지역화는 함께 일어나.",
+    },
+  ],
+  hanjaMatches: [
+    { char: "地", meaning: "땅 지", relatedWords: ["지도", "토지", "지역"] },
+    { char: "域", meaning: "지경 역", relatedWords: ["구역", "영역"], note: "지경 = 땅의 경계, 곧 구역·범위" },
+    { char: "化", meaning: "될 화", relatedWords: ["변화", "도시화"] },
+  ],
+  definition: {
+    dictionary: "지역화는 지역의 고유한 특성을 살려 세계적으로 알리고 경쟁력을 갖는 현상이야.",
+    easy: "지역화는 그 지역만의 특색(특산물·축제·문화)을 살려서, 다른 곳과 세계에 알리고 경쟁력을 키우는 거야.",
+  },
+  visualThinking: {
+    image: "/concept-images/demo-jiyeokhwa.png",
+    description: "한 지역의 고유한 특색이 화살표를 타고 다른 지역과 세계로 뻗어 나가.",
+    label: "지역 특색 → 다른 지역·세계로",
+    avoid: "지역화를 '세계와 담 쌓고 고립되는 것'으로 그리면 안 돼. 세계화와 함께 일어나.",
+  },
+  explainHints: [
+    "무엇이? 지역의 어떤 점(특색·고유함)이",
+    "어떻게? 전 세계로 뻗어 나가",
+    "왜? 그 가치를 인정받아서",
+  ],
+};
+
 export const DEMO_CONTENT_BY_CONCEPT: Record<string, ConceptContent> = {
   sci22_30: {
     ...biyeol,
@@ -297,7 +455,7 @@ export const DEMO_CONTENT_BY_CONCEPT: Record<string, ConceptContent> = {
     },
     concept: {
       hanja: [
-        { char: "凝", mean: "엉길 응", note: "응결처럼 흩어진 것이 한데 엉김" },
+        { char: "凝", mean: "엉길 응", note: "엉기다: 흩어져 움직이던 입자가 서로 달라붙어 한 덩어리로 뭉침" },
         { char: "固", mean: "굳을 고", note: "고체, 고집, 고정처럼 굳음" },
       ],
       combined: "엉겨서 굳음 → 액체가 고체로 변함",
@@ -870,5 +1028,300 @@ export const DEMO_CONTENT_BY_CONCEPT: Record<string, ConceptContent> = {
       formula: "變 + 異 = 변이",
       readingCue: "무엇이 다른지보다 먼저 '같은 종 안인가?'를 묻기",
     },
+  },
+
+  sci22_35: {
+    conceptId: "sci22_35",
+    feel: {
+      scene: [yunghaeScreenContent.feel!.comicSituation],
+      hook: yunghaeScreenContent.feel!.question,
+    },
+    concept: {
+      hanja: [
+        { char: "融", mean: "녹을 융", note: "융합, 용융처럼 녹아 섞임" },
+        { char: "解", mean: "풀 해", note: "풀림 — 규칙적으로 묶여 있던 입자 배열이 흐트러짐 (해결·해석의 '풀 해')" },
+      ],
+      combined: "녹아 풀림 → 고체의 규칙적 입자 배열이 풀려 액체로 변함",
+      definition: "융해는 고체가 열을 흡수하여 액체로 상태가 변하는 현상이다.",
+      coreList: ["고체가 액체로 변함", "열을 흡수함", "입자 배열이 느슨해짐"],
+      warning: "녹는 동안 온도가 계속 오르는 건 아니야. 녹는점에서는 온도가 일정하고, 얻은 열은 입자 배열을 푸는 데 쓰여.",
+    },
+    quiz: [
+      {
+        id: "sci22_35_demo_q1",
+        concept_id: "sci22_35",
+        type: "정의형",
+        prompt: "융해를 가장 잘 설명한 것은?",
+        options: [
+          { text: "고체가 열을 얻어 액체로 변하는 현상", is_correct: true, tag: null },
+          { text: "액체가 굳어 고체가 되는 현상", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+          { text: "기체가 액체로 맺히는 현상", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+        ],
+      },
+      {
+        id: "sci22_35_demo_q2",
+        concept_id: "sci22_35",
+        type: "변별형",
+        prompt: "다음 중 융해인 것은?",
+        options: [
+          { text: "얼음이 녹아 물이 된다", is_correct: true, tag: null },
+          { text: "물이 얼어 얼음이 된다", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+          { text: "김이 서려 물방울이 맺힌다", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+        ],
+      },
+    ],
+    bigPicture: {
+      flow: [
+        { when: "고체가 열을 얻음(데워짐)", then: "입자 운동이 활발해짐 → 배열이 풀림 → 액체(융해)" },
+        { when: "액체가 열을 잃음(식음)", then: "입자 운동이 느려짐 → 규칙 배열 → 고체(응고)" },
+      ],
+      compare: [
+        { label: "융해", what: "고체 → 액체 (열 흡수)", oneLiner: "녹음" },
+        { label: "응고", what: "액체 → 고체 (열 방출)", oneLiner: "굳음 (융해의 반대)" },
+      ],
+      why: "융해에서 변하는 건 물질의 종류가 아니라 입자의 배열이야. 물질의 양은 그대로, 배열만 규칙→느슨으로 바뀌어.",
+    },
+    explain: {
+      prompt: "융해가 무엇인지, 얼음이 녹는 예로 설명해 봐.",
+      closeWord: { sentence: "융해는 고체가 액체로 변하는 ___이다.", answer: "현상" },
+      slots: yunghaeScreenContent.explainHints!.map((hint) => ({ label: hint, hint, answer: "" })),
+      hanjaHint: "融(녹을) + 解(풀) → “녹아 풀림”. 푸는 건 입자의 배열이야.",
+      coreKeywords: ["고체", "액체", "열 흡수", "녹는점"],
+    },
+    visual: {
+      kind: "화살표사슬",
+      image: "/concept-images/demo-yunghae.png",
+      caption: yunghaeScreenContent.visualThinking!.label,
+      nodes: ["고체(줄 맞춤)", "열 얻음", "액체(느슨)"],
+    },
+    definitionImage: {
+      image: "/concept-images/demo-yunghae.png",
+      alt: "융해 입자 배열 도식",
+      dictionaryDefinition: yunghaeScreenContent.definition!.dictionary,
+      imageCaption: yunghaeScreenContent.visualThinking!.label,
+    },
+    screenContent: yunghaeScreenContent,
+  },
+
+  sci22_39: {
+    conceptId: "sci22_39",
+    feel: {
+      scene: [seunghwaScreenContent.feel!.comicSituation],
+      hook: seunghwaScreenContent.feel!.question,
+    },
+    concept: {
+      hanja: [
+        { char: "昇", mean: "오를 승", note: "상승, 승진처럼 위로 오름" },
+        { char: "華", mean: "빛날 화", note: "화려·화사의 '빛날 화(華)' — 세계화·변화의 '될 화(化)'가 아님! 昇華는 '높이 올라 빛나듯 흩어짐'" },
+      ],
+      combined: "바로 오름 → 고체가 액체 없이 기체로",
+      definition: "승화는 고체가 액체 단계를 거치지 않고 직접 기체로(또는 기체가 직접 고체로) 변하는 현상이다.",
+      coreList: ["고체 ↔ 기체로 바로 변함", "액체 단계가 없음", "드라이아이스·냉동실 서리"],
+      warning: "드라이아이스의 하얀 '연기'는 승화한 이산화탄소가 아니라, 공기 중 수증기가 차가워져 응결한 거야. 승화 자체와 구분해.",
+    },
+    quiz: [
+      {
+        id: "sci22_39_demo_q1",
+        concept_id: "sci22_39",
+        type: "정의형",
+        prompt: "승화를 가장 잘 설명한 것은?",
+        options: [
+          { text: "고체가 액체 없이 바로 기체로 변하는 현상", is_correct: true, tag: null },
+          { text: "고체가 녹아 액체가 되는 현상", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+          { text: "액체가 끓어 기체가 되는 현상", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+        ],
+      },
+      {
+        id: "sci22_39_demo_q2",
+        concept_id: "sci22_39",
+        type: "변별형",
+        prompt: "다음 중 승화인 것은?",
+        options: [
+          { text: "드라이아이스가 스르르 사라진다", is_correct: true, tag: null },
+          { text: "물이 끓어 수증기가 된다", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+          { text: "얼음이 녹아 물이 된다", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+        ],
+      },
+    ],
+    bigPicture: {
+      flow: [
+        { when: "고체가 열을 얻음", then: "액체를 건너뛰고 바로 기체 (승화)" },
+        { when: "기체가 열을 잃음", then: "액체를 건너뛰고 바로 고체 (승화의 반대)" },
+      ],
+      compare: [
+        { label: "승화", what: "고체 ↔ 기체 (액체 없음)", oneLiner: "바로 오름" },
+        { label: "융해", what: "고체 → 액체", oneLiner: "녹음(액체 거침)" },
+        { label: "기화", what: "액체 → 기체", oneLiner: "끓음·증발(액체 거침)" },
+      ],
+      why: "승화의 핵심은 '액체 단계를 건너뛴다'는 거야. 융해·기화는 액체를 거치지만, 승화는 곧바로 상태가 바뀌어.",
+    },
+    explain: {
+      prompt: "승화가 무엇인지, 드라이아이스 예로 설명해 봐.",
+      closeWord: { sentence: "승화는 액체를 거치지 않는 상태 변화 ___이다.", answer: "현상" },
+      slots: seunghwaScreenContent.explainHints!.map((hint) => ({ label: hint, hint, answer: "" })),
+      hanjaHint: "昇(오를) + 華(빛날) → “바로 올라 흩어짐”. 액체를 건너뛰는 게 핵심이야.",
+      coreKeywords: ["고체", "기체", "액체 없음", "승화"],
+    },
+    visual: {
+      kind: "화살표사슬",
+      image: "/concept-images/demo-seunghwa.png",
+      caption: seunghwaScreenContent.visualThinking!.label,
+      nodes: ["고체", "액체 건너뜀", "기체"],
+    },
+    definitionImage: {
+      image: "/concept-images/demo-seunghwa.png",
+      alt: "승화 입자 배열 도식",
+      dictionaryDefinition: seunghwaScreenContent.definition!.dictionary,
+      imageCaption: seunghwaScreenContent.visualThinking!.label,
+    },
+    screenContent: seunghwaScreenContent,
+  },
+
+  soc1_01: {
+    conceptId: "soc1_01",
+    feel: {
+      scene: [segyehwaScreenContent.feel!.comicSituation],
+      hook: segyehwaScreenContent.feel!.question,
+    },
+    concept: {
+      hanja: [
+        { char: "世", mean: "세상 세", note: "세상, 세대처럼 온 세상" },
+        { char: "界", mean: "경계 계", note: "경계, 한계처럼 나뉜 구역" },
+        { char: "化", mean: "될 화", note: "변화, 도시화처럼 그렇게 됨" },
+      ],
+      combined: "세계가 하나로 됨 → 나라들이 밀접하게 연결됨",
+      definition: "세계화는 사람들의 활동 범위가 전 세계로 넓어지고 나라 간 상호의존이 커지는 현상이다.",
+      coreList: ["활동 범위가 세계로 넓어짐", "나라 간 상호의존이 커짐", "상품·문화·정보의 교류"],
+      warning: "세계화는 '서구화'와 달라. 한쪽을 따라가는 게 아니라 서로 주고받는 교류야. 편리해지지만 지역 격차·전통문화 약화 같은 문제도 함께 생겨.",
+    },
+    quiz: [
+      {
+        id: "soc1_01_demo_q1",
+        concept_id: "soc1_01",
+        type: "정의형",
+        prompt: "세계화의 특징으로 알맞은 것은?",
+        options: [
+          { text: "나라 간 상호의존이 커짐", is_correct: true, tag: null },
+          { text: "각 나라가 서로 단절되어 고립됨", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+          { text: "모든 나라가 서양과 똑같아짐", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+        ],
+      },
+      {
+        id: "soc1_01_demo_q2",
+        concept_id: "soc1_01",
+        type: "적용형",
+        prompt: "다음 중 세계화의 사례로 알맞은 것은?",
+        options: [
+          { text: "한국 드라마가 여러 나라에서 방영된다", is_correct: true, tag: null },
+          { text: "한 마을에서만 열리는 전통 장터", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+          { text: "교실에서 모둠 활동을 한다", is_correct: false, tag: ERROR_TAGS.CATEGORY },
+        ],
+      },
+    ],
+    bigPicture: {
+      flow: [
+        { when: "교통·통신 발달", then: "사람·상품·정보가 국경을 쉽게 넘음" },
+        { when: "교류 증가", then: "나라 간 상호의존이 커짐 (세계화)" },
+      ],
+      compare: [
+        { label: "세계화", what: "세계가 하나로 연결됨", oneLiner: "상호의존 ↑" },
+        { label: "지역화", what: "지역 고유함을 살려 경쟁력", oneLiner: "고유함 ↑ (함께 일어남)" },
+      ],
+      why: "세계화와 지역화는 반대가 아니라 함께 일어나. 세계와 연결될수록, 지역만의 특색이 오히려 경쟁력이 되기도 해.",
+    },
+    explain: {
+      prompt: "세계화가 무엇인지, 해외 직구나 K-팝 예로 설명해 봐.",
+      closeWord: { sentence: "세계화는 세계가 하나로 연결되는 ___이다.", answer: "현상" },
+      slots: segyehwaScreenContent.explainHints!.map((hint) => ({ label: hint, hint, answer: "" })),
+      hanjaHint: "世(세상) + 界(경계) + 化(될) → “온 세상이 하나로 됨”.",
+      coreKeywords: ["세계로", "상호의존", "교류", "세계화"],
+    },
+    visual: {
+      kind: "묶음맵",
+      image: "/concept-images/demo-segyehwa.png",
+      caption: segyehwaScreenContent.visualThinking!.label,
+      nodes: ["상품", "문화", "정보", "국경을 넘어 오감"],
+    },
+    definitionImage: {
+      image: "/concept-images/demo-segyehwa.png",
+      alt: "세계화 교류 도식",
+      dictionaryDefinition: segyehwaScreenContent.definition!.dictionary,
+      imageCaption: segyehwaScreenContent.visualThinking!.label,
+    },
+    screenContent: segyehwaScreenContent,
+  },
+
+  soc1_02: {
+    conceptId: "soc1_02",
+    feel: {
+      scene: [jiyeokhwaScreenContent.feel!.comicSituation],
+      hook: jiyeokhwaScreenContent.feel!.question,
+    },
+    concept: {
+      hanja: [
+        { char: "地", mean: "땅 지", note: "지도, 토지처럼 땅" },
+        { char: "域", mean: "지경 역", note: "지경 = 땅의 경계, 곧 일정한 구역·범위(영역·지역)" },
+        { char: "化", mean: "될 화", note: "변화, 도시화처럼 그렇게 됨" },
+      ],
+      combined: "지역이 지역답게 됨 → 지역만의 특색을 살림",
+      definition: "지역화는 지역의 고유한 특성과 가치를 살려 세계적으로 알리고 경쟁력을 높이는 현상이다.",
+      coreList: ["지역 고유의 특색을 살림", "다른 곳·세계로 알림", "세계화와 함께 진행됨"],
+      warning: "지역화는 세계화의 단순한 반대가 아니야. 세계와 연결될수록 지역만의 특색이 오히려 경쟁력이 되어, 둘은 함께 일어나.",
+    },
+    quiz: [
+      {
+        id: "soc1_02_demo_q1",
+        concept_id: "soc1_02",
+        type: "적용형",
+        prompt: "지역화 전략으로 알맞은 것은?",
+        options: [
+          { text: "지역 특산물과 축제로 지역을 알린다", is_correct: true, tag: null },
+          { text: "모든 지역을 똑같은 모습으로 만든다", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+          { text: "외국 문화만 그대로 받아들인다", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+        ],
+      },
+      {
+        id: "soc1_02_demo_q2",
+        concept_id: "soc1_02",
+        type: "정의형",
+        prompt: "지역화에 대한 설명으로 옳은 것은?",
+        options: [
+          { text: "세계화와 함께 일어난다", is_correct: true, tag: null },
+          { text: "세계와 완전히 단절되는 것이다", is_correct: false, tag: ERROR_TAGS.CONFUSION },
+          { text: "지역 특색을 없애는 것이다", is_correct: false, tag: ERROR_TAGS.CORE },
+        ],
+      },
+    ],
+    bigPicture: {
+      flow: [
+        { when: "세계와 연결이 늘어남", then: "지역만의 특색이 오히려 눈에 띔" },
+        { when: "지역 고유함을 살림", then: "세계에 알리고 경쟁력을 얻음 (지역화)" },
+      ],
+      compare: [
+        { label: "지역화", what: "지역 고유함을 살려 경쟁력", oneLiner: "고유함 ↑" },
+        { label: "세계화", what: "세계가 하나로 연결됨", oneLiner: "상호의존 ↑ (함께 일어남)" },
+      ],
+      why: "세계화와 지역화는 동전의 양면이야. 세계와 연결될수록 '가장 지역다운 것'이 세계적 경쟁력이 돼.",
+    },
+    explain: {
+      prompt: "지역화가 무엇인지, 지역 특산물이나 축제 예로 설명해 봐.",
+      closeWord: { sentence: "지역화는 지역 특색을 살려 경쟁력을 갖는 ___이다.", answer: "현상" },
+      slots: jiyeokhwaScreenContent.explainHints!.map((hint) => ({ label: hint, hint, answer: "" })),
+      hanjaHint: "地(땅) + 域(지경) + 化(될) → “지역이 지역답게 됨”. 살리는 건 그 지역만의 특색이야.",
+      coreKeywords: ["지역 특색", "경쟁력", "세계로", "지역화"],
+    },
+    visual: {
+      kind: "화살표사슬",
+      image: "/concept-images/demo-jiyeokhwa.png",
+      caption: jiyeokhwaScreenContent.visualThinking!.label,
+      nodes: ["지역 특색", "다른 지역", "세계로"],
+    },
+    definitionImage: {
+      image: "/concept-images/demo-jiyeokhwa.png",
+      alt: "지역화 확산 도식",
+      dictionaryDefinition: jiyeokhwaScreenContent.definition!.dictionary,
+      imageCaption: jiyeokhwaScreenContent.visualThinking!.label,
+    },
+    screenContent: jiyeokhwaScreenContent,
   },
 };
